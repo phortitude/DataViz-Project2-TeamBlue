@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NYC Employment Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <!-- Leaflet JS & CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a class="w3-bar-item w3-button"><b>Team:</b> Rodney, Kevin, John & Abiel</a>
+            
+
+        </div>
+    </div>
+
+
+    <p class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <img class="w3-image" src="https://luggagehero.com/wp-content/uploads/2019/03/shutterstock_758701297.jpg"
+            alt="Architecture" width="1500" height="800">
+        <div class="w3-display-middle w3-margin-top w3-center">
+            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>New York City
+                        Employment Data</b></span> <span class="w3-hide-small w3-text-light-grey"></span>
+                <h1>
+        </div>
+    </p>
+
+
+
+
+    <div class="row">
+
+        <div class="col-sm-9 col-md-7 main">
+            <section class="py-5">
+                <div class="container-fluid">
+                    <h1>New York City: 5 Bouroughs</h1>
+                    <br>
+                    <p class="lead"> Brief Text about New York and overall employment data </p>
+                    <p class="lead"> New York is composed of five boroughs: Manhattan, Brooklyn, Queens, The Bronx and
+                        Staten Island.
+
+                        Each borough is part of five of New York's counties: Manhattan is part of the County of New
+                        York, Brooklyn is part of the County of Kings, Queens (County of Queens), the Bronx is part of
+                        the Bronx County and Staten Island (Richmond County). Until 1898, when these counties were
+                        joined, the city of New York was only formed by Manhattan. </p>
+
+                        <ul>
+                            <li>Manhattan</li>
+                            <li>Brooklyn</li>
+                            <li>Queens</li>
+                            <li>The Bronx</li>
+                            <li>Staten Island</li>
+                        </ul>
+
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container-fluid">
+                    <h1>Manhattan</h1>
+                    <p class="lead"> Brief Text about the data</p>
+                    <img class="w3-image"
+                        src="https://luggagehero.com/wp-content/uploads/2019/03/shutterstock_758701297.jpg"
+                        alt="Architecture" width="500" height="800">
+                </div>
+            </section>
+            <section class="py-5">
+                <div class="container">
+                    <h1>Brooklyn</h1>
+                    <p class="lead"> Brief Text about the data</p>
+                    <img class="w3-image"
+                        src="https://luggagehero.com/wp-content/uploads/2019/03/shutterstock_758701297.jpg"
+                        alt="Architecture" width="500" height="800">
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container">
+                    <h1>Queens</h1>
+                    <p class="lead"> Brief Text about the data</p>
+                    <img class="w3-image"
+                        src="https://luggagehero.com/wp-content/uploads/2019/03/shutterstock_758701297.jpg"
+                        alt="Architecture" width="500" height="800">
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container">
+                    <h1>The Bronx</h1>
+                    <p class="lead"> Brief Text about the data</p>
+                    <img class="w3-image"
+                        src="https://luggagehero.com/wp-content/uploads/2019/03/shutterstock_758701297.jpg"
+                        alt="Architecture" width="500" height="800">
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container">
+                    <h1>Staten Island</h1>
+                    <p class="lead"> Brief Text about the data</p>
+                    <img class="w3-image"
+                        src="https://luggagehero.com/wp-content/uploads/2019/03/shutterstock_758701297.jpg"
+                        alt="Architecture" width="500" height="800">
+                </div>
+            </section>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div id="map" class="col-sm-3 col-md-5 sidebar">
+        
+    </div>
+
+    </div>
+
+    <script type="text/javascript" src="static/logic.js"></script>
+
+</body>
+
+</html>
