@@ -15,7 +15,7 @@
                 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
                     attribution: "Map data &copy; <a href='https://www.openstreetmap.org/'>OpenStreetMap</a> contributors, <a href='https://creativecommons.org/licenses/by-sa/2.0/'>CC-BY-SA</a>, Imagery © <a href='https://www.mapbox.com/'>Mapbox</a>",
                     maxZoom: 18,
-                    id: "mapbox.light",
+                    id: "mapbox.streets",
                     accessToken: "pk.eyJ1IjoiZHVja3NveCIsImEiOiJjanowaDlhYmEwY2htM2xsOHVkcjFmMTQ3In0.K3IY9V_ok30CDEHLyJ8z9g" /* Insert your dropbox API here */
                     }).addTo(map);  
 
