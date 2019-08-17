@@ -1,4 +1,4 @@
-,jobID,agency,businessTitle,numOfPositions,jobCategory,salaryRangeFrom,salaryRangeTo,workLocation1
+index,jobID,agency,businessTitle,numOfPositions,jobCategory,salaryRangeFrom,salaryRangeTo,workLocation1
 0,137433,DEPT OF HEALTH/MENTAL HYGIENE,Contract Analyst,1,Finance_ Accounting_ & Procurement,50598,85053,42-09 28th Street_ Long Island City_ NY
 1,138531,DEPT OF ENVIRONMENT PROTECTION,Associate Chemist,1,Health Public Safety_ Inspections_ & Enforcement,50623,75083,96-05 Horace Harding Expway
 2,160910,DEPT OF INFO TECH & TELECOMM,Deputy Director_ Audits and Accounts,1,Finance_ Accounting_ & Procurement,49492,60000,New York_ NY
