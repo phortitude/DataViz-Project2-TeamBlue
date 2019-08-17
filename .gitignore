@@ -1,0 +1,5 @@
+# Ignoring DS_Store
+.DS_Store
+
+# Ignoring api key
+config.py
