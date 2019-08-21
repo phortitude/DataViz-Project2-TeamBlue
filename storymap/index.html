@@ -91,7 +91,7 @@
 
         // additional layers
 
-        var url = "https://data.sfgov.org/resource/cuks-n6tp.json?$limit=10000";
+        var url = "http://127.0.0.1:5000/api/jobs";
         var heatArray = [];
         var salaryArray = [];
 
@@ -100,10 +100,23 @@
         console.log(response);
 
         for (var i = 0; i < response.length; i++) {
-            var location = response[i].location;
+            var lat = response[i].lat;
+            var lon = response[i].lon;
 
-            if (location) {
-            heatArray.push([location.coordinates[1], location.coordinates[0]]);
+            var frequency = response[i].salaryFrequency;
+            var minSalary = response[i].salaryFrom;
+            var maxSalary = response[i].salaryTo;
+            var salary = minSalary * maxSalary / 2;
+            if (frequency = 'Hourly') {
+                salaryArray.push([lat, lon, salary * 40 * 52]);
+            } else if (frequency = 'Daily') {
+                salaryArray.push([lat, lon, salary * 262]);
+            } else {
+                salaryArray.push([lat, lon, salary]);
+            }
+
+            if (lat) {
+            heatArray.push([lat, lon]);
             }
         }});
 
@@ -111,16 +124,24 @@
             'heat': L.heatLayer(heatArray, {
                 radius: 20,
                 blur: 35
-            })
+            }) /* ,
+            'salary': L.heatLayer(salaryArray, {
+                radius: 20,
+                blur: 35,
+                gradient: {
+                    20000 : 'green',
+                    50000 : 'yellow',
+                    100000 : 'red' 
+                }
+            })*/
         };
 
         var markers = {
-            manhattan: {lat: 40.7831, lon: -73.9712, zoom: 12},
+            manhattan: {lat: 40.7831, lon: -73.9712, zoom: 12, layer:layers['heat']},
             brooklyn: {lat: 40.6782, lon: -73.9442, zoom: 12},
             queens: {lat: 40.7282, lon: -73.7949, zoom: 12},
             bronx: {lat: 40.8448, lon: -73.8648, zoom: 12},
-            staten: {lat: 40.5795, lon: -74.1502, zoom: 12},
-            losa: {lat: 37.7749, lon: -122.4194, zoom: 13, layer:layers['heat']}
+            staten: {lat: 40.5795, lon: -74.1502, zoom: 12}
         };
 
         $('.main').storymap({markers: markers});
