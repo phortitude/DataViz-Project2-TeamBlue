@@ -41,6 +41,7 @@ class Job(db.Model):
     salaryrangeto = db.Column(db.Float)
     salaryrangefrom = db.Column(db.Float)
     salaryfrequency = db.Column(db.VARCHAR(255))
+    jobcatcondensed = db.Column(db.VARCHAR(255))
 
     def __repr__(self):
         return '<Job %r>' % (self.name)
@@ -56,7 +57,7 @@ def home():
 
 @app.route("/api/jobs")
 def jobs():
-    results = db.session.query(Job.index, Job.businesstitle, Job.newlat, Job.newlong, Job.borough, Job.salaryrangefrom, Job.salaryrangeto, Job.salaryfrequency).all()
+    results = db.session.query(Job.index, Job.businesstitle, Job.newlat, Job.newlong, Job.borough, Job.salaryrangefrom, Job.salaryrangeto, Job.salaryfrequency, Job.jobcatcondensed).all()
 
     joblist = []
     for result in results:
@@ -67,6 +68,7 @@ def jobs():
         salaryFrom = result[5]
         salaryTo = result[6]
         salaryFrequency = result[7]
+        jobCat = result[8]
 
         job_data = {
             "title": title,
@@ -75,7 +77,8 @@ def jobs():
             "borough": borough,
             "salaryFrom": salaryFrom,
             "salaryTo": salaryTo,
-            "salaryFrequency": salaryFrequency
+            "salaryFrequency": salaryFrequency,
+            "jobCat": jobCat
         }
         joblist.append(job_data)
     return jsonify(joblist)

@@ -104,6 +104,7 @@
         for (var i = 0; i < response.length; i++) {
             var lat = response[i].lat;
             var lon = response[i].lon;
+            var cat = response[i].jobCat;
 
             var frequency = response[i].salaryFrequency;
             var minSalary = response[i].salaryFrom;
@@ -116,6 +117,8 @@
             } else {
                 salaryArray.push([lat, lon, salary]);
             }
+
+            if (cat = '')
 
             if (lat) {
             heatArray.push([lat, lon]);
